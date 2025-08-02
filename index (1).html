@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doodle Notice</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Caveat:wght@400;600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0, #fd79a8, #e17055);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Kalam', cursive;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .notice-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 500px;
+            position: relative;
+            border: 3px dashed #2d3436;
+            transform: rotate(-1deg);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: rotate(-1deg) translateY(0px); }
+            50% { transform: rotate(1deg) translateY(-10px); }
+        }
+        
+        .notice-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 20px;
+            background: #e17055;
+            border-radius: 20px 20px 0 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .heading {
+            text-align: center;
+            font-size: 3.5rem;
+            color: #d63031;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 0px #fab1a0;
+            transform: rotate(-2deg);
+            font-family: 'Caveat', cursive;
+        }
+        
+        .content {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: #2d3436;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .threat-line {
+            font-size: 1.6rem;
+            color: #e17055;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 25px;
+            transform: rotate(1deg);
+            font-family: 'Caveat', cursive;
+        }
+        
+        .doodle-1 {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border: 3px solid #fd79a8;
+            border-radius: 50%;
+            transform: rotate(15deg);
+        }
+        
+        .doodle-2 {
+            position: absolute;
+            bottom: 20px;
+            left: 15px;
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 40px solid #74b9ff;
+            transform: rotate(-20deg);
+        }
+        
+        .doodle-3 {
+            position: absolute;
+            top: 50%;
+            left: -15px;
+            width: 30px;
+            height: 30px;
+            background: #00b894;
+            transform: rotate(45deg);
+        }
+        
+        .doodle-4 {
+            position: absolute;
+            top: 80px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            background: #fdcb6e;
+            border-radius: 50%;
+        }
+        
+        .doodle-stars {
+            position: absolute;
+            font-size: 2rem;
+            color: #fd79a8;
+            animation: twinkle 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        .star-1 { top: 30px; left: 30px; }
+        .star-2 { bottom: 60px; right: 40px; }
+        .star-3 { top: 60%; left: 20px; }
+        
+        .squiggly-line {
+            position: absolute;
+            bottom: 15px;
+            right: 80px;
+            width: 60px;
+            height: 20px;
+            border-top: 3px solid #a29bfe;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(10deg);
+        }
+        
+        .squiggly-line::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            right: -20px;
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid #a29bfe;
+            border-radius: 0 0 50px 50px;
+        }
+        
+        .highlight {
+            background: linear-gradient(45deg, #fdcb6e, #e17055);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="notice-container">
+        <div class="doodle-1"></div>
+        <div class="doodle-2"></div>
+        <div class="doodle-3"></div>
+        <div class="doodle-4"></div>
+        <div class="doodle-stars star-1">★</div>
+        <div class="doodle-stars star-2">✦</div>
+        <div class="doodle-stars star-3">✧</div>
+        <div class="squiggly-line"></div>
+        
+        <h1 class="heading">NOTICE</h1>
+        
+        <div class="content">
+            <strong>Kal group call ka din hai,</strong><br>
+            aap kahi bhi ho hamse nahi matlab,<br>
+            aapki entry call par <span class="highlight">anivaarya</span> hai..<br><br>
+            Varna aap <strong>koote jayenge</strong>
+        </div>
+        
+        <div class="threat-line">
+            --Ye dhamki hai--
+        </div>
+    </div>
+</body>
+</html>
